@@ -36,6 +36,13 @@ namespace MyGame
                 // Assign name for current enemy
                 enemies[i] = new Enemy(enemyName);
             }
+
+            // Loop for each enemy in array
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                Console.WriteLine(
+                    $"-Enemy {i + 1} name: {enemies[i].GetName()}");
+            }
         }
     }
 }
