@@ -20,6 +20,16 @@ namespace MyGame
             return name;
         }
 
+        public float GetHealth()
+        {
+            return health;
+        }
+
+        public float GetShield()
+        {
+            return shield;
+        }
+
         /// <summary>
         /// Decrements given damage value from shield value and, 
         /// if this value is at 0, decrements from health as well.
