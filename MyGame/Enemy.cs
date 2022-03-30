@@ -20,6 +20,15 @@ namespace MyGame
             return name;
         }
 
+        public void SetName(string newName)
+        {
+            if (newName[0] == " ")
+                newName = newName.Replace(newName[0], string.Empty);
+            if (newName[newName.Length] == " ")
+                newName = newName.Replace(newName[newName.Length], string.Empty);
+            this.name = newName;
+        }
+
         public float GetHealth()
         {
             return health;
