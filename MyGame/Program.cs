@@ -60,6 +60,12 @@ namespace MyGame
                 Console.WriteLine($"-Health: {enemies[i].GetHealth()}");
                 Console.WriteLine($"-Shield: {enemies[i].GetShield()}");
             }
+
+            // Extra space before printing more information
+            Console.WriteLine();
+
+            // Print amount of power ups for all enemies
+            Console.WriteLine($"Total power ups: {Enemy.GetTotalPowerUps()}");
         }
     }
 }
