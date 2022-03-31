@@ -17,6 +17,11 @@ namespace MyGame
             shield = 0;
         }
 
+        static Enemy()
+        {
+            totalPowerUps = 0;
+        }
+
         public string GetName()
         {
             return name;
