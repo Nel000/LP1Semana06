@@ -79,6 +79,8 @@ namespace MyGame
 
         public void PickupPowerUp(PowerUp powerUp, float value)
         {
+            totalPowerUps++;
+
             if (powerUp == PowerUp.Health)
                 health += value;
                 if (health > maxValue)
