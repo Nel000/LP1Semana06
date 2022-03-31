@@ -66,6 +66,12 @@ namespace MyGame
 
             // Print amount of power ups for all enemies
             Console.WriteLine($"Total power ups: {Enemy.GetTotalPowerUps()}");
+
+            // Extra space before printing more information
+            Console.WriteLine();
+
+            // Print 'Thank You' message
+            Console.WriteLine("Merci d'utiliser ce programme!");
         }
     }
 }
