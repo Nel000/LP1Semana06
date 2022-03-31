@@ -21,6 +21,9 @@ namespace MyGame
             // Set array size as number of enemies
             enemies = new Enemy[numOfEnemies];
 
+            // New instance of Random class
+            Random rand = new Random();
+
             // Loop for each  number of enemies
             for (int i = 0; i < numOfEnemies; i++)
             {
@@ -40,8 +43,22 @@ namespace MyGame
             // Loop for each enemy in array
             for (int i = 0; i < enemies.Length; i++)
             {
+                // Extra space before next enemy's information
+                Console.WriteLine();
+
+                // Pickup health power up with random value
+                enemies[i].PickupPowerUp(PowerUp.Health, rand.Next(0, 20));
+
+                // Pickup shield power up with random value
+                enemies[i].PickupPowerUp(PowerUp.Shield, rand.Next(0, 20));
+
+                // Print name for current enemy
                 Console.WriteLine(
-                    $"-Enemy {i + 1} name: {enemies[i].GetName()}");
+                    $"Enemy {i + 1} name: {enemies[i].GetName()}");
+                
+                // Print health and shield values for current enemy
+                Console.WriteLine($"-Health: {enemies[i].GetHealth()}");
+                Console.WriteLine($"-Shield: {enemies[i].GetShield()}");
             }
         }
     }

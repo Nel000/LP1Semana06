@@ -12,7 +12,7 @@ namespace MyGame
         public Enemy(string name)
         {
             SetName(name);
-            health = 100;
+            health = 50;
             shield = 0;
         }
 
