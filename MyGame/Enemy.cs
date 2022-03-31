@@ -7,6 +7,7 @@ namespace MyGame
         private string name;
         private float health;
         private float shield;
+        private int maxValue = 100;
 
         public Enemy(string name)
         {
@@ -63,6 +64,19 @@ namespace MyGame
                 // If health value is lower than 0, health is set at 0
                 if (health < 0) health = 0;
             }
+        }
+
+        public void PickupPowerUp(PowerUp powerUp, float value)
+        {
+            if (powerUp == PowerUp.Health)
+                health += value;
+                if (health > maxValue)
+                    health = maxValue;
+                    
+            if (powerUp == PowerUp.Shield)
+                shield += value;
+                if (shield > maxValue)
+                    shield = maxValue;
         }
     }
 }
